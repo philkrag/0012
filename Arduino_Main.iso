@@ -1,0 +1,33 @@
+
+int Equipment_ID = 2;
+int Device_ID = 1;
+int Random_1 = 0;
+int Random_2 = 0;
+int Random_3 = 0;
+
+  
+void setup() {
+  
+	Serial.begin(115200); //same as ESP baud
+  
+}
+
+void loop() {
+
+Random_1 = random(300);
+Random_2 = random(300);
+Random_3 = random(300);
+
+Serial.print(Equipment_ID);
+Serial.print(';');
+Serial.print(Device_ID);
+Serial.print(';');
+Serial.print(Random_1);
+Serial.print(';');
+Serial.print(Random_2);
+Serial.print(';');
+Serial.println(Random_3);
+  
+delay(30000);
+
+}

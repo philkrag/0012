@@ -1,33 +1,51 @@
+/*
+// /////////////////////////////////////////////////////////////////////// COPYRIGHT NOTICE
+// This program is free software: you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation, either version 3 of the License, or
+// (at your option) any later version.
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+// You should have received a copy of the GNU General Public License
+// along with Pip-Project.  If not, see <http://www.gnu.org/licenses/>.
+// /////////////////////////////////////////////////////////////////////// COPYRIGHT NOTICE
+// /////////////////////////////////////////////////////////////////////// VERSION CONTROL
+// PAGE CREATED BY: Phillip Kraguljac
+// PAGE CREATED DATE: 2019-07-20
+// DATE       || NAME           || MODIFICATION
+// 2019-12-24   || Phillip Kraguljac    || Created.
+// /////////////////////////////////////////////////////////////////////// VERSION CONTROL
+*/
 
-int Equipment_ID = 2;
-int Device_ID = 1;
-int Random_1 = 0;
-int Random_2 = 0;
-int Random_3 = 0;
+// /////////////////////////////////////////////////////////////////////// USER DEFINABLE VARIABLES
+int Equipment_ID = 2;                                                           // ...
+int Device_ID = 1;                                                              // ...
 
-  
-void setup() {
-  
-	Serial.begin(115200); //same as ESP baud
-  
-}
 
-void loop() {
+// /////////////////////////////////////////////////////////////////////// SYSTEM VARIABLES
+int Random_1 = 0;                                                               // ...
+int Random_2 = 0;                                                               // ...
+int Random_3 = 0;                                                               // ...
 
-Random_1 = random(300);
-Random_2 = random(300);
-Random_3 = random(300);
 
-Serial.print(Equipment_ID);
-Serial.print(';');
-Serial.print(Device_ID);
-Serial.print(';');
-Serial.print(Random_1);
-Serial.print(';');
-Serial.print(Random_2);
-Serial.print(';');
-Serial.println(Random_3);
-  
-delay(30000);
+void setup() {                                                                  // ...
+Serial.begin(115200);                                                           // ...
+}                                                                               // ...
 
-}
+void loop() {                                                                   // ...
+Random_1 = random(300);                                                         // ...
+Random_2 = random(300);                                                         // ...
+Random_3 = random(300);                                                         // ...
+Serial.print(Equipment_ID);                                                     // ...
+Serial.print(';');                                                              // ...
+Serial.print(Device_ID);                                                        // ...
+Serial.print(';');                                                              // ...
+Serial.print(Random_1);                                                         // ...
+Serial.print(';');                                                              // ...
+Serial.print(Random_2);                                                         // ...
+Serial.print(';');                                                              // ...
+Serial.println(Random_3);                                                       // ...
+delay(30000);                                                                   // 30s delay.
+}                                                                               // ...
